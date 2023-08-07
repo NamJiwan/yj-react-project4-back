@@ -4,6 +4,7 @@ import express from "express"
 import morgan from "morgan";
 import rentalRouter from "./routers/rentalRouter.js";
 import cors from "cors";
+import foodsRouter from "./routers/foodsRouter.js";
 
 const PORT = 8080;
 const app = express()
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/rental", rentalRouter)
+app.use("/api/foods", foodsRouter)
 
 // app.get('/test', function (req, res) {
 //   res.json({"ok":"안녕하세요"});
