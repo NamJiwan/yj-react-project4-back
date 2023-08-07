@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var PORT = 8080;
 var app = (0, _express["default"])();
 var corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: ["http://localhost:3000", "https://unrivaled-kataifi-3a60c8.netlify.app"],
   methode: ["GET", "POST"],
   credentials: true
 };
