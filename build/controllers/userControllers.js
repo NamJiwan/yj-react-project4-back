@@ -21,15 +21,4 @@ export const postRegisterMember = async (req, res) => {
   }
 };
 
-// 로그인 컨트롤러
-export const postUsernameSignIn = async (req, res) => {
-  const {username, password} = req.body;
-  //에러처리
-  if(username === "" || password === ""){
-    res.json({ok:"false", message:"아이디와 패스워드는 반드시 입력해야 합니다."})
-  }
 
-  //아이디 확인
-  const user = await User.findOne({username});
-  console.log(user);
-};
