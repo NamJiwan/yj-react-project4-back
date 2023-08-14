@@ -6,6 +6,7 @@ import rentalRouter from "./routers/rentalRouter.js";
 import cors from "cors";
 import foodsRouter from "./routers/foodsRouter.js";
 import userRouter from "./routers/userRouter.js";
+import cookieParser from "cookie-parser";
 
 const PORT = 8080;
 const app = express()
@@ -18,6 +19,8 @@ const corsOptions = {
   credentials:true,
 }
 
+// 미들웨어부분
+app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(morgan("dev"));
 app.use(express.json());

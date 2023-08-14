@@ -25,6 +25,8 @@ app.use(_express["default"].urlencoded({
 }));
 app.use("/api/rental", _rentalRouter["default"]);
 app.use("/api/foods", _foodsRouter["default"]);
+app.use("/api/user", userRouter);
+
 
 // app.get('/test', function (req, res) {
 //   res.json({"ok":"안녕하세요"});
