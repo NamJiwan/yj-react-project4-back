@@ -5,9 +5,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 _mongoose["default"].connect(process.env.DB_URL);
 var db = _mongoose["default"].connection;
 var handleOpen = function handleOpen() {
-  return console.log('✔Connected to DB');
+  return console.log("\u2714Connected to DB");
 };
 db.on("error", function (error) {
   return console.log("DB Error", error);
 });
-db.once('open', handleOpen);
+db.once("open", handleOpen);

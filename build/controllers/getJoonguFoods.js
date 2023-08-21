@@ -13,14 +13,15 @@ var getJoonguFoods = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          _context.next = 2;
-          return fetch("https://api.odcloud.kr/api/15052602/v1/uddi:855807e2-fe8a-4e47-8a5a-ce1894e410d7_201909031553?page=1&perPage=10&serviceKey=99KIHGGjBmzaox6aET3NVVM1tdw5HU2mHUeFW%2BM6Fnl0BIDFW4%2FmH8dCaB4LR1tb0LsUAXePe1GHwhyu%2BZ%2FEBA%3D%3D").then(function (res) {
+          console.log("api");
+          _context.next = 3;
+          return fetch("https://api.odcloud.kr/api/15052602/v1/uddi:855807e2-fe8a-4e47-8a5a-ce1894e410d7_201909031553?page=1&perPage=10&serviceKey=I3ONCgSdg1Tf8GYukQdpJYSpq7nLY9Uqy3AE1Zp%2B1tx1r11%2BDj5djJKCEllItBS2WtgL318%2BX93ZNZ5K5RHSsA%3D%3D").then(function (res) {
             return res.json();
           }).then(function (data) {
             console.log(data);
             res.send(data);
           });
-        case 2:
+        case 3:
         case "end":
           return _context.stop();
       }

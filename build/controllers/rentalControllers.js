@@ -16,35 +16,36 @@ var rentalNoticeWrite = /*#__PURE__*/function () {
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
-          _req$body = req.body, title = _req$body.title, description = _req$body.description, writer = _req$body.writer; // console.log(title, description , writer);
-          _context.prev = 1;
-          _context.next = 4;
+          _req$body = req.body, title = _req$body.title, description = _req$body.description, writer = _req$body.writer;
+          console.log(req.body);
+          _context.prev = 2;
+          _context.next = 5;
           return _notice["default"].create({
             title: title,
             description: description,
             writer: writer,
             createdAt: Date.now()
           });
-        case 4:
+        case 5:
           notice = _context.sent;
           res.json({
             ok: "true",
             notice: notice
           });
-          _context.next = 11;
+          _context.next = 12;
           break;
-        case 8:
-          _context.prev = 8;
-          _context.t0 = _context["catch"](1);
+        case 9:
+          _context.prev = 9;
+          _context.t0 = _context["catch"](2);
           res.json({
             ok: "false",
             error: _context.t0
           });
-        case 11:
+        case 12:
         case "end":
           return _context.stop();
       }
-    }, _callee, null, [[1, 8]]);
+    }, _callee, null, [[2, 9]]);
   }));
   return function rentalNoticeWrite(_x, _x2) {
     return _ref.apply(this, arguments);
@@ -59,7 +60,9 @@ var rentalNotice = /*#__PURE__*/function () {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return _notice["default"].find({});
+          return _notice["default"].find({}).sort({
+            createdAt: -1
+          });
         case 3:
           notices = _context2.sent;
           _context2.next = 6;
@@ -91,7 +94,7 @@ var rentalNotice = /*#__PURE__*/function () {
   };
 }();
 
-// 디테일
+// 게시판 디테일
 exports.rentalNotice = rentalNotice;
 var rentalNoticeDetail = /*#__PURE__*/function () {
   var _ref3 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3(req, res) {
